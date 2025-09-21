@@ -1,0 +1,8 @@
+# Ficheiros compilados do Maven/Java
+/target/
+
+# Ficheiros do VS Code
+/.vscode/
+
+# Ficheiros de log
+*.log
