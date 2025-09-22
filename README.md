@@ -1,16 +1,27 @@
-# Instruções
+Calculadora Distribuída com Java RMI
+Implementação de uma calculadora descentralizada utilizando Java RMI, desenvolvida como parte de uma atividade acadêmica sobre Arquitetura Orientada a Serviços (SOA).
 
-Tutorial adaptado de [Getting Started Using Java RMI](https://docs.oracle.com/javase/8/docs/technotes/guides/rmi/hello/hello-world.html).
+Sobre o Projeto
+Este projeto foi desenvolvido para atender aos requisitos de uma atividade proposta pelo professor da disciplina de Sistemas Distribuídos. O objetivo principal era aplicar na prática os conceitos de Arquitetura Orientada a Serviços (SOA) e comunicação remota utilizando a tecnologia Java RMI.
 
-## Executando o servidor
-Execute o comando a seguir a do diretório raiz do projeto:
-```
-java -classpath ./target/classes -Djava.rmi.server.codebase=file:target/classes/ server.hello.HelloServer
-```
-Obs.: se utilizarmos o método `LocateRegistry.getRegistry()`, previsamos iniciar o utilitário `rmiregistry`. Execute-o a partir da pasta `target/classes`. Este utilitário está localizado na pasta `$JAVA_HOME/bin`.
+O sistema simula um ambiente de microserviços, onde um servidor principal atua como um orquestrador, delegando as operações matemáticas para serviços especialistas e independentes.
 
-## Executando o client
-Execute o comando a seguir a do diretório raiz do projeto:
-```
-java  -classpath ./target/classes client.hello.Client
-```
+Arquitetura
+A arquitetura do sistema é composta por três componentes principais:
+
+Cliente: A aplicação que interage com o usuário. Ela se comunica apenas com o Servidor Calculadora, abstraindo toda a complexidade da rede de serviços.
+
+Servidor Calculadora (Orquestrador): Atua como um ponto central de entrada (Facade). Ele recebe as requisições do cliente e as encaminha para o servidor especialista apropriado.
+
+Servidores Especialistas (Trabalhadores): Quatro servidores independentes, onde cada um é responsável por uma única operação matemática (Soma, Subtração, Multiplicação e Divisão).
+
+O fluxo de uma requisição é: Cliente → Servidor Calculadora → Servidor Especialista → Servidor Calculadora → Cliente.
+
+Tecnologias Utilizadas
+Java: Linguagem de programação principal.
+
+Java RMI (Remote Method Invocation): Tecnologia para a comunicação entre os diferentes servidores (nós) do sistema.
+
+Maven: Ferramenta para gestão de dependências e compilação do projeto.
+
+Para executar a aplicação, é necessário ter o JDK (Java Development Kit) instalado e configurado no PATH do sistema.
