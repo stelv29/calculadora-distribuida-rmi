@@ -20,9 +20,6 @@ A arquitetura do sistema é composta por três componentes principais:
 
 O fluxo de uma requisição é: `Cliente` → `Servidor Calculadora` → `Servidor Especialista` → `Servidor Calculadora` → `Cliente`.
 
-*(Dica: Envie a imagem do diagrama para o seu repositório no GitHub e substitua o link abaixo para que a imagem apareça aqui!)*
-`![Diagrama da Arquitetura](image_a6f0f1.png)`
-
 ## Tecnologias Utilizadas
 
 * **Java:** Linguagem de programação principal.
