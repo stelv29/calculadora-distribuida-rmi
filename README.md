@@ -29,11 +29,3 @@ O fluxo de uma requisição é: `Cliente` → `Servidor Calculadora` → `Servid
 * **Java RMI (Remote Method Invocation):** Tecnologia para a comunicação entre os diferentes servidores (nós) do sistema.
 * **Maven:** Ferramenta para gestão de dependências e compilação do projeto.
 
-## Como Executar o Projeto
-
-Para executar a aplicação, é necessário ter o **JDK (Java Development Kit)** instalado e configurado no PATH do sistema.
-
-**1. Compilar o Projeto**
-   Na pasta raiz do projeto (`java-rmi`), execute o seguinte comando para compilar todo o código-fonte:
-   ```bash
-   mvn compile
